@@ -15,7 +15,4 @@ public class DualNumber {
         return real.toString() + " " + (dual < 0 ? "-" : "+") + " " + dual.toString() + "e";
     }
 
-        public static int dual() {
-        return 42;
-    }
 }
