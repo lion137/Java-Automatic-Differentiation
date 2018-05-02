@@ -10,7 +10,7 @@ public class Tests {
     @Test
     public void test() {
         int a  = DualNumber.dual();
-        assertEquals(a, 42) ;
+        assertEquals(a, 42);
     }
 
 }
