@@ -12,13 +12,29 @@ public class DualNumber {
         this.dual = _dual;
     }
 
+    public Double getReal() {
+        return real;
+    }
+
+    public Double getDual() {
+        return dual;
+    }
+
     public DualNumber add(DualNumber other){
         return new DualNumber(this.real + other.real, this.dual + other.dual);
     }
 
+    public DualNumber sub(DualNumber other){
+        return new DualNumber(this.real - other.real, this.dual - other.dual);
+    }
+
+    public DualNumber mul(DualNumber other){
+        return new DualNumber(this.real * other.real, this.real * other.dual + this.dual * other.real);
+    }
+
     @Override
     public String toString() {
-        return real.toString() + " " + (dual < 0 ? "-" : "+") + " " + dual.toString() + "e";
+        return real.toString() + " " + (dual < 0 ? "-" : "+") + " " + Math.abs(dual) + "e";
     }
 
     @Override
