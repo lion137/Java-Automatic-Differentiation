@@ -10,6 +10,11 @@ public class DualNumber {
         this.dual = _dual;
     }
 
+
+    @Override public String toString(){
+        return real.toString() + " " + (dual < 0 ? "-" : "+") + " " + dual.toString() + "e";
+    }
+
         public static int dual() {
         return 42;
     }
